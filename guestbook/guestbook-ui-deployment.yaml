@@ -13,6 +13,8 @@ spec:
       labels:
         app: guestbook-ui
     spec:
+      securityContext:
+        runAsUser: 0
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
